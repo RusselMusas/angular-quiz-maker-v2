@@ -332,7 +332,7 @@ class QuizQuestionsComponent {
         this.question3 = this.questions.results[2];
         this.question4 = this.questions.results[3];
         this.question5 = this.questions.results[4];
-        console.log("Quiz: ", this.questions);
+        console.log("QuizQuestions: ", this.questions);
         this.isSubmitted01 = false;
       },
       error: error => {
@@ -630,8 +630,8 @@ class QuizResultsComponent {
     this.question3 = this.quizQuestion?.results[2];
     this.question4 = this.quizQuestion?.results[3];
     this.question5 = this.quizQuestion?.results[4];
-    console.log(this.quizQuestion);
-    console.log(this.quizResponse);
+    // console.log(this.quizQuestion);
+    // console.log(this.quizResponse);
     this.quizScore = this.computeScore(this.quizResponse ? this.quizResponse : undefined);
     this.totalQuiz = this.quizQuestion?.results ? this.quizQuestion.results.length : 0;
   }
@@ -951,4 +951,4 @@ _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__.platformBrowser().bootstr
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }
 ]);
-//# sourceMappingURL=main.6f9913b33114b1f5.js.map
+//# sourceMappingURL=main.b026afe13a47cffc.js.map

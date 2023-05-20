@@ -38,35 +38,4 @@ h1 {
     display: flex!important;
 }
 
-.radios .radio {
-    background-color: #ffffff;
-    border-color: #15b957;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 10px;
-    color: #15b957;
-    display: inline-block;
-    width: 20%;
-    cursor: pointer;
-    text-align: center;
-    margin: 3px;
-    font-size: small;
-}
-
-.radios .radio:hover {
-    background-color: #15b957;
-    border-color: #15b957;
-    color: #ffffff;
-}
-
-.radios input[type=radio] {
-    display: none;
-}
-
-.radios input[type=radio]:checked + .radio {
-        background-color: #15b957;
-        border-color: #15b957;
-        color: #ffffff;
-}
-
-/*# sourceMappingURL=styles.58128d6c24735690.css.map*/
+/*# sourceMappingURL=styles.99b59329e1d05de1.css.map*/

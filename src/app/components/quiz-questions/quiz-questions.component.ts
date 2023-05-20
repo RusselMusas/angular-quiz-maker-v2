@@ -74,7 +74,7 @@ export class QuizQuestionsComponent implements OnInit {
           this.question3 = this.questions.results[2];
           this.question4 = this.questions.results[3];
           this.question5 = this.questions.results[4];
-          console.log("Quiz: ", this.questions);
+          console.log("QuizQuestions: ", this.questions);
           this.isSubmitted01 = false;
         },
         error: error => {

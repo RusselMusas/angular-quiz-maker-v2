@@ -28,8 +28,8 @@ export class QuizResultsComponent implements OnInit {
     this.question3 = this.quizQuestion?.results[2];
     this.question4 = this.quizQuestion?.results[3];
     this.question5 = this.quizQuestion?.results[4];
-    console.log(this.quizQuestion);
-    console.log(this.quizResponse);
+    // console.log(this.quizQuestion);
+    // console.log(this.quizResponse);
     this.quizScore = this.computeScore(this.quizResponse ? this.quizResponse : undefined);
     this.totalQuiz = this.quizQuestion?.results? this.quizQuestion.results.length : 0;
   }
