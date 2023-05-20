@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './modules/app-routing.module';
+import { ProcessHttpmsgService } from './services/process-httpmsg.service';
 import { QuizService } from './services/quiz.service';
 
 import { AppComponent } from './app.component';
@@ -23,9 +24,11 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [
+    ProcessHttpmsgService,
     QuizService
   ],
   bootstrap: [AppComponent]

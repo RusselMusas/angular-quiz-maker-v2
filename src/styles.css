@@ -1,3 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
+h1 {
+    font-size: 1.5em;
+}
+
+.col, .col-1, .col-2, 
+.col-3, .col-4, .col-5, 
+.col-6, .col-7, .col-8, 
+.col-9, .col-10, .col-11, 
+.col-12 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.text-small {
+    font-size: small;
+}
+
+.form-group {
+    display: block!important;
+}
+
+.form-group.button {
+    display: flex!important;
+}
+
+.radios .radio {
+    background-color: #ffffff;
+    border-color: #15b957;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    color: #15b957;
+    display: inline-block;
+    width: 20%;
+    cursor: pointer;
+    text-align: center;
+    margin: 3px;
+    font-size: small;
+}
+
+.radios .radio:hover {
+    background-color: #15b957;
+    border-color: #15b957;
+    color: #ffffff;
+}
+
+.radios input[type=radio] {
+    display: none;
+}
+
+.radios input[type=radio]:checked + .radio {
+        background-color: #15b957;
+        border-color: #15b957;
+        color: #ffffff;
+}

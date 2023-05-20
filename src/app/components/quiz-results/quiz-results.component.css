@@ -1,0 +1,13 @@
+button.btn-outline-success,
+button.btn-success,
+button.btn-danger {
+    margin-left: 4px;
+    margin-right: 4px;
+    font-size: small;
+}
+
+.btn-outline-success:hover {
+    color: #28a745;
+    background-color: #fff;
+    border-color: #28a745;
+}

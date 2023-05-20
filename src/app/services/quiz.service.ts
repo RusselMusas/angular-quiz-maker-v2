@@ -1,9 +1,39 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable, catchError, retry, timeout } from 'rxjs';
+import { ProcessHttpmsgService } from './process-httpmsg.service';
+import { environment } from 'src/environments/environment';
+import { Category } from '../models/category.model';
+import { QuizQuestion } from '../models/quiz-question.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class QuizService {
 
-  constructor() { }
+  apiBaseUrl: string = environment.apiUrl;
+  timeOut: number = environment.httpTimeOut;
+
+  constructor(private http: HttpClient,
+              private processHttpMsg: ProcessHttpmsgService) { }
+
+  getCategories(): Observable<Category> {
+    // console.log("API Url: ", this.apiBaseUrl);
+    console.log(this.apiBaseUrl + '/api_category.php');
+    return this.http.get<Category>(this.apiBaseUrl + '/api_category.php')
+      .pipe(timeout(this.timeOut))
+      .pipe(retry(3))
+      .pipe(catchError(this.processHttpMsg.handleError));
+  }
+
+  getQuizQuestions(amount: number, catId: number, difficulty: string, type: string): Observable<QuizQuestion> {
+    // console.log("API Url: ", this.apiBaseUrl);
+    let reqParameters = `amount=${amount}&category=${catId}&difficulty=${difficulty}&type=${type}`;
+    console.log(this.apiBaseUrl + `/api.php?${reqParameters}`);
+    return this.http.get<QuizQuestion>(this.apiBaseUrl + `/api.php?${reqParameters}`)
+      .pipe(timeout(this.timeOut))
+      .pipe(retry(3))
+      .pipe(catchError(this.processHttpMsg.handleError));
+  }
+
 }
