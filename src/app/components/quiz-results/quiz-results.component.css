@@ -1,8 +1,8 @@
 button.btn-outline-success,
 button.btn-success,
 button.btn-danger {
-    margin-left: 4px;
-    margin-right: 4px;
+    margin-left: 3px;
+    margin-right: 3px;
     font-size: small;
 }
 
@@ -10,4 +10,8 @@ button.btn-danger {
     color: #28a745;
     background-color: #fff;
     border-color: #28a745;
+}
+
+button {
+    margin-bottom: 5px;
 }

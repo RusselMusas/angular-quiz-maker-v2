@@ -1,16 +1,14 @@
 .radios .radio {
     background-color: #ffffff;
     border-color: #15b957;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 10px;
     color: #15b957;
     display: inline-block;
-    width: 20%;
+    width: fit-content;
     cursor: pointer;
     text-align: center;
     margin: 3px;
     font-size: small;
+    white-space: nowrap;
 }
 
 .radios .radio:hover {
@@ -23,8 +21,8 @@
     display: none;
 }
 
-.radios input[type=radio]:checked + .radio {
-        background-color: #15b957;
-        border-color: #15b957;
-        color: #ffffff;
+.radios input[type=radio]:checked+.radio {
+    background-color: #15b957;
+    border-color: #15b957;
+    color: #ffffff;
 }

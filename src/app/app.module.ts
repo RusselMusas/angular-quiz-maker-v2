@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { QuizResultsComponent } from './components/quiz-results/quiz-results.component';
 import { QuizQuestionsComponent } from './components/quiz-questions/quiz-questions.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { DecodeHtml } from './pipes/decode-html.pipe';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     QuizResultsComponent,
     QuizQuestionsComponent,
     NotFoundComponent,
+    DecodeHtml
   ],
   imports: [
     BrowserModule,

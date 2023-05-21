@@ -25,7 +25,7 @@
                 </div>
                 <div class="form-group mb-2 col-2 justify-content-end">
                     <button type="submit" class="btn btn-light border-secondary btn-sm w-100" id="createBtn"
-                        [disabled]="formCreateQuiz.invalid">Create</button>
+                        [disabled]="formCreateQuiz.invalid || isSubmitted01">Create</button>
                 </div>
                 <div [hidden]="!isSubmitted01" class="spinner-border text-secondary ml-2" role="status">
                     <span class="sr-only">Processing...</span>
@@ -34,61 +34,61 @@
             <form class="form-inline row px-4" [formGroup]="formSubmitQuiz" (ngSubmit)="submitQuiz()">
                 <div class="form-group mb-4 col-12">
                     <div class="form-group question">
-                        <p class="text-small">{{ question1?.question }}</p>
+                        <p class="text-small">{{ question1?.question | decodeHtml }}</p>
                     </div>
                     <div class="form-group radios">
                         <ng-container *ngFor="let element of question1?.all_answers; let j = index">
                             <input type="radio" name="inputResponse1" formControlName="inputResponse1" [value]="element"
                                 [id]="'q1' + j" />
-                            <label class="radio" [for]="'q1' + j">{{ element }}</label>
+                            <label class="radio btn btn-sm" [for]="'q1' + j">{{ element | decodeHtml }}</label>
                         </ng-container>
                     </div>
                 </div>
                 <div class="form-group mb-2 col-12">
                     <div class="form-group question">
-                        <p class="text-small">{{ question2?.question }}</p>
+                        <p class="text-small">{{ question2?.question | decodeHtml }}</p>
                     </div>
                     <div class="form-group radios">
                         <ng-container *ngFor="let element of question2?.all_answers; let j = index">
                             <input type="radio" name="inputResponse2" formControlName="inputResponse2" [value]="element"
                                 [id]="'q2' + j" />
-                            <label class="radio" [for]="'q2' + j">{{ element }}</label>
+                            <label class="radio btn btn-sm" [for]="'q2' + j">{{ element | decodeHtml }}</label>
                         </ng-container>
                     </div>
                 </div>
                 <div class="form-group mb-2 col-12">
                     <div class="form-group question">
-                        <p class="text-small">{{ question3?.question }}</p>
+                        <p class="text-small">{{ question3?.question | decodeHtml }}</p>
                     </div>
                     <div class="form-group radios">
                         <ng-container *ngFor="let element of question3?.all_answers; let j = index">
                             <input type="radio" name="inputResponse3" formControlName="inputResponse3" [value]="element"
                                 [id]="'q3' + j" />
-                            <label class="radio" [for]="'q3' + j">{{ element }}</label>
+                            <label class="radio btn btn-sm" [for]="'q3' + j">{{ element | decodeHtml }}</label>
                         </ng-container>
                     </div>
                 </div>
                 <div class="form-group mb-2 col-12">
                     <div class="form-group question">
-                        <p class="text-small">{{ question4?.question }}</p>
+                        <p class="text-small">{{ question4?.question | decodeHtml }}</p>
                     </div>
                     <div class="form-group radios">
                         <ng-container *ngFor="let element of question4?.all_answers; let j = index">
                             <input type="radio" name="inputResponse4" formControlName="inputResponse4" [value]="element"
                                 [id]="'q4' + j" />
-                            <label class="radio" [for]="'q4' + j">{{ element }}</label>
+                            <label class="radio btn btn-sm" [for]="'q4' + j">{{ element | decodeHtml }}</label>
                         </ng-container>
                     </div>
                 </div>
                 <div class="form-group mb-2 col-12">
                     <div class="form-group question">
-                        <p class="text-small">{{ question5?.question }}</p>
+                        <p class="text-small">{{ question5?.question | decodeHtml }}</p>
                     </div>
                     <div class="form-group radios">
                         <ng-container *ngFor="let element of question5?.all_answers; let j = index">
                             <input type="radio" name="inputResponse5" formControlName="inputResponse5" [value]="element"
                                 [id]="'q5' + j" />
-                            <label class="radio" [for]="'q5' + j">{{ element }}</label>
+                            <label class="radio btn btn-sm" [for]="'q5' + j">{{ element | decodeHtml }}</label>
                         </ng-container>
                     </div>
                 </div>

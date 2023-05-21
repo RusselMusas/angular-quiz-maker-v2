@@ -68,13 +68,13 @@ export class QuizQuestionsComponent implements OnInit {
       .subscribe({
         next: response => {
           response = this.setAllAnswers(response);
+          console.log("QuizQuestions response: ", response);
           this.questions = response;
           this.question1 = this.questions.results[0];
           this.question2 = this.questions.results[1];
           this.question3 = this.questions.results[2];
           this.question4 = this.questions.results[3];
           this.question5 = this.questions.results[4];
-          console.log("QuizQuestions: ", this.questions);
           this.isSubmitted01 = false;
         },
         error: error => {
